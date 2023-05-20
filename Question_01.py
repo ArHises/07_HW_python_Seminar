@@ -30,16 +30,16 @@ def vowels_len_word(word, vowels):
     return len(list(filter(lambda char: char in vowels, word)))
 # print(vowels_len_word(poem[0], vowels))
 
-# def build_rithem(poem, vowels):
+# def build_rhythm(poem, vowels):
 #     return list(vowels_len_word(word, vowels) for word in poem)
 
-build_rithem = lambda poem, vowels: list(vowels_len_word(word, vowels) for word in poem)
-# print(build_rithem(poem, vowels))
+build_rhythm = lambda poem, vowels: list(vowels_len_word(word, vowels) for word in poem)
+# print(build_rhythm(poem, vowels))
 
-def chech_rithem(poem):
+def chech_rhythm(poem):
     return all(num ==  poem[0] for num in poem)
 
-if chech_rithem(build_rithem(poem, vowels)):
+if chech_rhythm(build_rhythm(poem, vowels)):
     print("Парам пам-пам")
 else:
     print("Пам парам")
